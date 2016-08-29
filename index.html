@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mohawk Glass</title>
+	<title>Practice Project</title>
 	<link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -16,7 +16,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Mohawk Glass</a>
+			<a class="navbar-brand" href="#">Practice Project</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,92 +24,42 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Gallery</a></li>
 				<li><a href="#">Shop</a></li>
-				<li><a href="#">Whole Sale Inquiries</a></li>
-				<li><a href="#">About the Artist</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
   	</div><!-- /.container-fluid -->
 </nav>
 
-<div id="hero">
-	<div id="pager"></div>
-	<div id="pause">&asymp;</div>
-	<div id="play">&Delta;</div>
-	<div id="next">&rang;</div>
-	<div id="prev">&lang;</div>
+<div class="container">
+	<ul class="rslides">
+		<li>
+			<img src="http://placehold.it/1170x500">
+			<p class="caption">Caption One Test</p>
+		</li>
+	  <li>
+			<img src="http://placehold.it/1170x500">
+			<p class="caption">Caption Two Test</p>
+		</li>
+	  <li>
+			<img src="http://placehold.it/1170x500">
+			<p class="caption">Caption Three Test</p>
+		</li>
+	</ul>
+</div>
 
-	<div id="slider">
-		<div class="items">
-			<img src="assets/imgs/josh_with_glass.jpg" alt="Banner Image">
-			<div class="info">
-				<h2>Mohawk Banner</h2>
-				<p>Lorem Ipsum</p>
-			</div> <!-- End Info -->
-		</div> <!-- End Items -->
-
-		<div class="items">
-			<img src="assets/imgs/rig_collage_1.jpg" alt="Banner Image">
-			<div class="info">
-				<h2>Rig Collage One</h2>
-				<p>Lorem Ipsum</p>
-			</div> <!-- End Info -->
-		</div> <!-- End Items -->
-
-		<div class="items">
-			<img src="assets/imgs/rig_1.jpg" alt="Banner Image">
-			<div class="info">
-				<h2>Solo Rig</h2>
-				<p>Lorem Ipsum</p>
-			</div> <!-- End Info -->
-		</div> <!-- End Items -->
-
-		<div class="items">
-			<img src="assets/imgs/rig_collage_no_uv.jpg" alt="Banner Image">
-			<div class="info">
-				<h2>Rig Collage No Uv</h2>
-				<p>Lorem Ipsum</p>
-			</div> <!-- End Info -->
-		</div> <!-- End Items -->
-
-		<div class="items">
-			<img src="assets/imgs/rig_collage_uv.jpg" alt="Banner Image">
-			<div class="info">
-				<h2>Rig Collage Uv</h2>
-				<p>Lorem Ipsum</p>
-			</div> <!-- End Info -->
-		</div> <!-- End Items -->
-	</div> <!-- End Slider -->
-</div> <!-- End Hero -->
-
-
+<div class="container">
+	
+</div>
 
 <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="assets/js/jquery.cycle.all.js"></script>
-
-<script type="text/javascript">
-
-	$(function(){
-		$('#play').click(function(){
-			$('#slider').cycle('resume');
-			console.log('play')
-			return false;
-		});
-
-		$('#pause').click(function(){
-			$('#slider').cycle('pause');
-			console.log('pause')
-			return false;
-		});
-	});
-
-	$('#slider').cycle({
-		fx: 'scrollHorz',
-		next: '#next',
-		prev: '#prev',
-		pager: '#pager',
-		timeout: 3000,
-		speed: 900,
-	});
+<script src="assets/js/responsiveslides.min.js"></script>
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides({
+    	pager: true,
+    	maxwidth: 1170,
+    	namespace: 'centered-btns'
+    });
+  });
 </script>
 </body>
 </html>
